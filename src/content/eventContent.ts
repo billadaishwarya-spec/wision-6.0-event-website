@@ -2,6 +2,7 @@ import becLogo from "@/assets/bec-logo.png.asset.json";
 import ieeeBangaloreLogo from "@/assets/ieee-bangalore-section.png.asset.json";
 import ieeeNkssLogo from "@/assets/ieee-nkss.jpg.asset.json";
 import ieeeWieLogo from "@/assets/ieee-wie.jpg.asset.json";
+import becIeeeLogo from "@/assets/bec-ieee.png.asset.json";
 /**
  * WISION 6.0 — central content & configuration.
  * ------------------------------------------------------------------
@@ -52,7 +53,7 @@ export const OFFICIAL_LOGOS: OfficialLogo[] = [
   { id: "ieee-bangalore", name: "IEEE Bangalore Section", src: ieeeBangaloreLogo.url },
   { id: "ieee-nkss", name: "IEEE NKSS", src: ieeeNkssLogo.url },
   { id: "ieee-wie", name: "IEEE WIE", src: ieeeWieLogo.url },
-  { id: "bec-ieee", name: "BEC IEEE" },
+  { id: "bec-ieee", name: "BEC IEEE", src: becIeeeLogo.url },
 ];
 
 export type Round = { number: string; name: string; details?: string; skills?: string[] };
