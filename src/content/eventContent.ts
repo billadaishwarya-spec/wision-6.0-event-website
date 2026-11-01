@@ -1,6 +1,7 @@
 import becLogo from "@/assets/bec-logo.png.asset.json";
 import ieeeBangaloreLogo from "@/assets/ieee-bangalore-section.png.asset.json";
 import ieeeNkssLogo from "@/assets/ieee-nkss.jpg.asset.json";
+import ieeeWieLogo from "@/assets/ieee-wie.jpg.asset.json";
 /**
  * WISION 6.0 — central content & configuration.
  * ------------------------------------------------------------------
@@ -50,7 +51,7 @@ export const OFFICIAL_LOGOS: OfficialLogo[] = [
   { id: "bec", name: "BEC", src: becLogo.url },
   { id: "ieee-bangalore", name: "IEEE Bangalore Section", src: ieeeBangaloreLogo.url },
   { id: "ieee-nkss", name: "IEEE NKSS", src: ieeeNkssLogo.url },
-  { id: "ieee-wie", name: "IEEE WIE" },
+  { id: "ieee-wie", name: "IEEE WIE", src: ieeeWieLogo.url },
   { id: "bec-ieee", name: "BEC IEEE" },
 ];
 
