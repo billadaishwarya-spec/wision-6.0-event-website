@@ -143,7 +143,7 @@ export function Legacy() {
             ))}
           </ul>
         )}
-        <p className="mt-4 text-xs text-muted-foreground">Placeholder tiles shown — real photos from previous editions will be added soon.</p>
+        <p className="mt-4 text-xs text-muted-foreground">More photos from previous editions will be added as they're collected.</p>
       </div>
 
       <Dialog open={index !== null} onOpenChange={(o) => !o && setIndex(null)}>
