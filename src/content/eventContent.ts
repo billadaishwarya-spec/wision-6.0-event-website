@@ -161,7 +161,7 @@ const slots: Record<Edition, Partial<Record<Category, number>>> = {
 
 /** Real photos — key matches a generated slot id; add more as photos arrive. */
 const REAL_PHOTOS: Record<string, { src: string; alt: string }> = {
-  "1-0-inauguration-0": {
+  "1.0-inauguration-0": {
     src: wision10Inauguration.url,
     alt: "WISION-20 poster — BEC-IEEE Women in Engineering event on Women's Day, 8 March 2020",
   },
