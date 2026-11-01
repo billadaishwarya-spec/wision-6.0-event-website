@@ -149,10 +149,10 @@ export function Legacy() {
       <Dialog open={index !== null} onOpenChange={(o) => !o && setIndex(null)}>
         <DialogContent
           className="flex h-[100dvh] max-h-none w-screen max-w-none flex-col gap-0 rounded-none border-0 bg-background p-0 sm:rounded-none [&>button:last-child]:hidden"
-          onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+          onTouchStart={(e) => (touchX.current = e.touches[0]?.clientX ?? null)}
           onTouchEnd={(e) => {
             if (touchX.current === null) return;
-            const dx = e.changedTouches[0].clientX - touchX.current;
+            const dx = (e.changedTouches[0]?.clientX ?? touchX.current) - touchX.current;
             if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
             touchX.current = null;
           }}
