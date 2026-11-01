@@ -8,7 +8,7 @@ export function Schedule() {
     <section aria-labelledby="schedule-title" id="schedule" className="section-pad bg-lavender/50">
       <div className="container-page max-w-3xl">
         <SectionHeading id="schedule-title" eyebrow="Event schedule" title="Plan Your WISION Experience." />
-        <Tabs defaultValue={SCHEDULE[0].id} className="mt-8" data-reveal>
+        <Tabs defaultValue={SCHEDULE[0]?.id ?? ""} className="mt-8" data-reveal>
           <TabsList className="grid h-auto w-full grid-cols-2 rounded-2xl border border-border bg-card p-1.5">
             {SCHEDULE.map((d) => (
               <TabsTrigger
