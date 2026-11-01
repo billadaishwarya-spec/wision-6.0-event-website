@@ -3,6 +3,7 @@ import ieeeBangaloreLogo from "@/assets/ieee-bangalore-section.png.asset.json";
 import ieeeNkssLogo from "@/assets/ieee-nkss.jpg.asset.json";
 import ieeeWieLogo from "@/assets/ieee-wie.jpg.asset.json";
 import becIeeeLogo from "@/assets/bec-ieee.png.asset.json";
+import wision10Inauguration from "@/assets/wision-1-0-inauguration.jpg.asset.json";
 /**
  * WISION 6.0 — central content & configuration.
  * ------------------------------------------------------------------
@@ -158,14 +159,21 @@ const slots: Record<Edition, Partial<Record<Category, number>>> = {
   "5.0": { Inauguration: 1, Activities: 3, Participants: 2, Winners: 1, Team: 1, "Behind the Scenes": 1 },
 };
 
+/** Real photos — key matches a generated slot id; add more as photos arrive. */
+const REAL_PHOTOS: Record<string, { src: string; alt: string; caption: string }> = {
+  "1.0-inauguration-0": {
+    src: wision10Inauguration.url,
+    alt: "WISION-20 poster — BEC-IEEE Women in Engineering event on Women's Day, 8 March 2020",
+    caption: "WISION-20 poster · BEC-IEEE WIE, Women's Day 2020",
+  },
+};
+
 export const GALLERY: GalleryPhoto[] = EDITIONS.flatMap((edition) =>
   CATEGORIES.flatMap((category) =>
-    Array.from({ length: slots[edition][category] ?? 0 }, (_, i) => ({
-      id: `${edition}-${category}-${i}`.replace(/\s+/g, "-").toLowerCase(),
-      edition,
-      category,
-      caption: `WISION ${edition} · ${category} — photo ${i + 1} (to be added)`,
-    })),
+    Array.from({ length: slots[edition][category] ?? 0 }, (_, i) => {
+      const id = `${edition}-${category}-${i}`.replace(/\s+/g, "-").toLowerCase();
+      return { id, edition, category, caption: `WISION ${edition} · ${category} — photo ${i + 1} (to be added)`, ...REAL_PHOTOS[id] };
+    }),
   ),
 );
 
