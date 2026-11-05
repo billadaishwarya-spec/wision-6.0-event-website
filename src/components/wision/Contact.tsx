@@ -48,7 +48,7 @@ export function Contact() {
           <div className="flex items-center gap-3">
             <Instagram className="size-6 text-primary" aria-hidden />
             <div>
-              <p className="font-bold">Follow WISION on Instagram</p>
+              <p className="font-bold">Follow bec_ieee on Instagram</p>
               <p className="text-sm text-muted-foreground">{insta ? "Updates, results and shout-outs" : "Official handle will be shared soon"}</p>
             </div>
           </div>

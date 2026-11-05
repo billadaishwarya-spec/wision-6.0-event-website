@@ -39,7 +39,7 @@ function TeamCard({ team, featured }: { team: WinnerTeam; featured?: boolean }) 
           ))}
         </ul>
         <ul className="mt-4 flex flex-wrap gap-2">
-          {perks.map(({ icon: P, label }) => (
+          {perks.filter(({ label }) => label !== "Social media shout-out").map(({ icon: P, label }) => (
             <li key={label} className="inline-flex items-center gap-1.5 rounded-full bg-lavender px-3 py-1.5 text-xs font-semibold text-primary">
               <P className="size-3.5" aria-hidden /> {label}
             </li>

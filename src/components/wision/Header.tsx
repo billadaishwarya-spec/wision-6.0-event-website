@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { NAV_LINKS, OFFICIAL_LOGOS, EVENT } from "@/content/eventContent";
 import { scrollToId } from "@/lib/wision";
 import { RegisterButton } from "./RegisterButton";
@@ -73,22 +74,27 @@ export function Header() {
 
 export function LogoStrip() {
   return (
-    <section aria-label="Organisers and institutions" className="border-b border-border bg-card/60">
+    <section
+      aria-label="Organisers and institutions"
+      className="border-b border-border bg-card/60"
+    >
       <div className="container-page py-4">
-        <ul className="flex gap-3 overflow-x-auto pb-1 [scrollbar-width:none] sm:justify-center">
+        <ul className="grid grid-cols-5 items-center gap-2 sm:flex sm:justify-center sm:gap-6">
           {OFFICIAL_LOGOS.map((logo) => (
-            <li key={logo.id} className="shrink-0">
+            <li
+              key={logo.id}
+              className="flex min-w-0 items-center justify-center sm:shrink-0"
+            >
               {logo.src ? (
-                <img src={logo.src} alt={`${logo.name} logo`} className="h-12 w-auto object-contain" loading="lazy" />
+                <img
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  className="h-9 w-full max-w-[68px] object-contain sm:h-12 sm:w-auto sm:max-w-[140px]"
+                  loading="lazy"
+                />
               ) : (
-                <div
-                  className="flex h-12 min-w-[112px] items-center justify-center rounded-lg border border-dashed border-lilac bg-lavender/60 px-3 text-center text-[11px] font-semibold leading-tight text-primary-soft"
-                  title="Logo placeholder — replace in eventContent.ts"
-                >
-                  <span>
-                    {logo.name}
-                    <span className="block text-[9px] font-medium uppercase tracking-wider text-muted-foreground">Logo</span>
-                  </span>
+                <div className="flex h-9 w-full max-w-[68px] items-center justify-center rounded-lg border border-dashed border-lilac bg-lavender/60 px-1 text-center text-[9px] font-semibold text-primary-soft sm:h-12 sm:max-w-[140px]">
+                  {logo.name}
                 </div>
               )}
             </li>

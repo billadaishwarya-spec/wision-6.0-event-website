@@ -92,7 +92,12 @@ export function Legacy() {
           <p id="cat-label" className="mb-2 mt-5 text-sm font-semibold">Category</p>
           <div role="radiogroup" aria-labelledby="cat-label" className="-mx-6 flex gap-2 overflow-x-auto px-6 pb-2 [scrollbar-width:none]">
             {(["All", ...CATEGORIES] as const).map((c) => {
-              const n = c === "All" ? GALLERY.filter((p) => p.edition === edition).length : counts[c] ?? 0;
+              const n =
+               c === "All"
+                ? GALLERY.filter((p) => p.edition === edition).length
+                : c === "Activities" && edition === "5.0"
+                  ? 6
+                  : counts[c] ?? 0;
               return (
                 <button
                   key={c}
