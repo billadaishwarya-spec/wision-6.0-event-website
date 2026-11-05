@@ -27,7 +27,10 @@ export function Hero() {
           <span className="text-gradient-brand">WISION</span>
           <span className="block text-primary-soft">6.0</span>
         </h1>
-        <p data-hero className="mt-5 max-w-xl text-xl font-bold uppercase leading-snug tracking-tight text-foreground md:text-2xl">
+        <div data-hero className="mt-8">
+          <RegisterButton className="w-full sm:w-auto" />
+        </div>
+        <p data-hero className="mt-6 max-w-xl text-xl font-bold uppercase leading-snug tracking-tight text-foreground md:text-2xl">
           Your first step towards placement.
         </p>
         <p data-hero className="mt-3 max-w-md text-base leading-relaxed text-muted-foreground">
@@ -54,7 +57,6 @@ export function Hero() {
         </dl>
 
         <div data-hero className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <RegisterButton className="w-full sm:w-auto" />
           <Button variant="outline" size="cta" className="w-full sm:w-auto" onClick={() => scrollToId("about")}>
             Explore WISION <ArrowDown aria-hidden />
           </Button>
