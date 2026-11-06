@@ -1,3 +1,4 @@
+
 /**
  * WISION 6.0 — Central content and configuration.
  * All event information is maintained in this file.
@@ -13,7 +14,7 @@ export const EVENT = {
   institution:
     "Basaveshwar Engineering College (BEC), Bagalkote, Karnataka",
 
-  tagline: "Your First Step Towards Placement.",
+  tagline: "Think. Explore. Experience.",
 
   dates: "13–14 November 2026",
   time: "4:30 PM – 7:00 PM",
@@ -23,10 +24,10 @@ export const EVENT = {
 
   venueShort: "ECE Seminar Hall, BEC Bagalkote",
 
-  // Registration fees per team of two
+  // Registration fees per person
   fee: 50,
   ieeeMemberFee: 50,
-  nonIeeeFee: 60,
+  nonIeeeFee: 70,
   teamSize: 2,
 
   // Registration deadline
@@ -42,8 +43,11 @@ export const EVENT = {
 // REGISTRATION AND SOCIAL LINKS
 // --------------------------------------------------
 
+// Add the actual Google Form URL when available.
 export const REGISTRATION_URL = "";
-export const INSTAGRAM_URL = "https://www.instagram.com/bec_ieee/";
+
+export const INSTAGRAM_URL =
+  "https://www.instagram.com/bec_ieee/";
 
 export function getRegistrationUrl(): string | null {
   const url = REGISTRATION_URL.trim();
@@ -206,6 +210,11 @@ export const TEAM: TeamMember[] = [
     photo: "/team/faculty.png",
   },
   {
+    role: "Chair, BEC-IEEE",
+    name: "Bharatesh B.",
+    photo:"/team/bhartesh.png",
+  },
+  {
     role: "WIE Chair",
     name: "Aishwarya Billad",
     photo: "/team/wie-chair.png",
@@ -234,13 +243,13 @@ export type Contact = {
 
 export const CONTACTS: Contact[] = [
   {
-    name: "Aishwarya.Billad",
+    name: "Aishwarya Billad",
     phone: "9449311134",
     whatsapp: "",
   },
   {
-    name: "",
-    phone: "",
+    name: "Bharatesh B.",
+    phone: "9113218190",
     whatsapp: "",
   },
 ];
@@ -259,35 +268,9 @@ export function normalisePhone(raw?: string): string | null {
 }
 
 // --------------------------------------------------
-// PREVIOUS WINNERS AND RUNNER-UP
-// Winner photographs stored in public/winners/
+// PREVIOUS WINNERS
+// Previous Winners section removed from the website.
 // --------------------------------------------------
-
-export type WinnerTeam = {
-  label: string;
-  edition: string;
-  members: [string, string];
-  photo?: string;
-};
-
-export const WINNERS: {
-  winner: WinnerTeam;
-  runnerUp: WinnerTeam;
-} = {
-  winner: {
-    label: "Winner Team",
-    edition: "WISION 5.0",
-    members: ["Sahana H.", "Suraj D."],
-    photo: "/winners/5.0winner1.jpeg",
-  },
-
-  runnerUp: {
-    label: "Runner-up Team",
-    edition: "WISION 5.0",
-    members: ["Spoorti N.", "Nitin O."],
-    photo: "/winners/5.0winner2.jpeg",
-  },
-};
 
 // --------------------------------------------------
 // PARTICIPANT BENEFITS AND REWARDS
@@ -459,6 +442,7 @@ export const GALLERY: GalleryPhoto[] = [
 
 // --------------------------------------------------
 // MOBILE NAVIGATION
+// Previous Winners link removed.
 // --------------------------------------------------
 
 export const NAV_LINKS = [
@@ -469,10 +453,6 @@ export const NAV_LINKS = [
   {
     id: "legacy",
     label: "Legacy",
-  },
-  {
-    id: "winners",
-    label: "Winners",
   },
   {
     id: "rounds",

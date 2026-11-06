@@ -1,7 +1,7 @@
+
 import {
   ArrowUpRight,
   CalendarDays,
-  CheckCircle2,
   Clock,
   GraduationCap,
   IndianRupee,
@@ -147,17 +147,20 @@ const facts = [
   {
     icon: GraduationCap,
     title: "Eligibility",
-    text: "Open only to BEC students — all branches, all academic years.",
+    text:
+      "Open only to BEC students across all branches and academic years.",
   },
   {
     icon: Users,
-    title: "Team size",
-    text: "Exactly 2 members per team.",
+    title: "Team composition",
+    text:
+      "Exactly 2 members per team. At least one girl member is compulsory. Both members can be girls.",
   },
   {
     icon: IndianRupee,
     title: "Registration fee",
-    text: `₹${EVENT.ieeeMemberFee} per team if at least one member is an IEEE member; ₹${EVENT.nonIeeeFee} per team if both members are non-IEEE.`,
+    text:
+      `₹${EVENT.ieeeMemberFee} per IEEE member and ₹${EVENT.nonIeeeFee} per non-IEEE member. The fee is calculated individually.`,
   },
   {
     icon: CalendarDays,
@@ -181,6 +184,15 @@ const facts = [
 // --------------------------------------------------
 
 export function Registration() {
+  const bothIeee =
+    EVENT.ieeeMemberFee * EVENT.teamSize;
+
+  const oneIeeeOneNonIeee =
+    EVENT.ieeeMemberFee + EVENT.nonIeeeFee;
+
+  const bothNonIeee =
+    EVENT.nonIeeeFee * EVENT.teamSize;
+
   return (
     <section
       aria-labelledby="register-title"
@@ -195,9 +207,9 @@ export function Registration() {
           <SectionHeading
             id="register-title"
             eyebrow="Registration"
-            title="Your First Step Starts Here."
+            title="Register Your Team."
           >
-            Grab a teammate and register before the deadline.
+            Bring your teammate and join the WISION 6.0 experience!
           </SectionHeading>
 
           <ul className="mt-8 grid gap-3">
@@ -241,17 +253,17 @@ export function Registration() {
 
           <Countdown />
 
-          {/* FEE CARD */}
+          {/* PER-PERSON FEE CARD */}
 
           <div className="mt-6 rounded-xl bg-primary-foreground/10 p-5 ring-1 ring-primary-foreground/15">
 
             <p className="text-xs font-semibold uppercase tracking-wider text-lilac">
-              Fee summary
+              Registration fee per person
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-3">
 
-              {/* IEEE TEAM */}
+              {/* IEEE MEMBER */}
 
               <div className="rounded-xl bg-primary-foreground/10 p-3">
                 <p className="text-3xl font-extrabold">
@@ -259,15 +271,15 @@ export function Registration() {
                 </p>
 
                 <p className="mt-1 text-xs font-semibold text-lilac">
-                  At least one IEEE member
+                  IEEE member
                 </p>
 
                 <p className="mt-1 text-xs text-primary-foreground/80">
-                  Per team
+                  Per person
                 </p>
               </div>
 
-              {/* NON-IEEE TEAM */}
+              {/* NON-IEEE MEMBER */}
 
               <div className="rounded-xl bg-primary-foreground/10 p-3">
                 <p className="text-3xl font-extrabold">
@@ -275,39 +287,53 @@ export function Registration() {
                 </p>
 
                 <p className="mt-1 text-xs font-semibold text-lilac">
-                  Both members non-IEEE
+                  Non-IEEE member
                 </p>
 
                 <p className="mt-1 text-xs text-primary-foreground/80">
-                  Per team
+                  Per person
                 </p>
               </div>
 
             </div>
 
-            <p className="mt-3 text-right text-sm font-semibold">
-              {EVENT.teamSize} members per team
-            </p>
+            {/* TEAM TOTALS */}
 
-            <p className="mt-4 text-sm font-semibold">
-              One-time fee covers:
-            </p>
+            <div className="mt-5 border-t border-primary-foreground/20 pt-4">
 
-            <ul className="mt-2 space-y-2 text-sm">
-              {[
-                "Participation in all Day 1 rounds",
-                "Refreshments",
-                "Participation certificate for every participant",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-2">
-                  <CheckCircle2
-                    className="mt-0.5 size-4 shrink-0 text-lilac"
-                    aria-hidden
-                  />
-                  {t}
+              <p className="text-sm font-bold">
+                Total fee for a team of {EVENT.teamSize}
+              </p>
+
+              <ul className="mt-3 space-y-3 text-sm">
+
+                <li className="flex items-center justify-between gap-3">
+                  <span>Both members are IEEE</span>
+                  <span className="font-extrabold">
+                    ₹{bothIeee}
+                  </span>
                 </li>
-              ))}
-            </ul>
+
+                <li className="flex items-center justify-between gap-3">
+                  <span>One IEEE + one non-IEEE</span>
+                  <span className="font-extrabold">
+                    ₹{oneIeeeOneNonIeee}
+                  </span>
+                </li>
+
+                <li className="flex items-center justify-between gap-3">
+                  <span>Both members are non-IEEE</span>
+                  <span className="font-extrabold">
+                    ₹{bothNonIeee}
+                  </span>
+                </li>
+
+              </ul>
+            </div>
+
+            <p className="mt-4 text-right text-sm font-semibold">
+              Exactly {EVENT.teamSize} members per team
+            </p>
 
             {/* DAY 2 QUALIFICATION */}
 
