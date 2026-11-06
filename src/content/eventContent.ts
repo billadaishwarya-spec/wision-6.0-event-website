@@ -44,7 +44,7 @@ export const EVENT = {
 // --------------------------------------------------
 
 // Add the actual Google Form URL when available.
-export const REGISTRATION_URL = "";
+export const REGISTRATION_URL = "https://forms.gle/vUoF9VbzJtAydPr18";
 
 export const INSTAGRAM_URL =
   "https://www.instagram.com/bec_ieee/";
