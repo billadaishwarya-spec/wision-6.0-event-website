@@ -1,3 +1,4 @@
+
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Header, LogoStrip } from "@/components/wision/Header";
@@ -13,10 +14,11 @@ import { Contact, Footer } from "@/components/wision/Contact";
 import { MobileBar } from "@/components/wision/MobileBar";
 import { prefersReducedMotion } from "@/lib/wision";
 
-const title = "WISION 6.0 — Your First Step Towards Placement | BEC-IEEE WIE";
+// SEO title and description
+const title = "WISION 6.0 — Think. Explore. Experience. | BEC-IEEE WIE";
 
 const description =
-  "WISION 6.0 by BEC-IEEE WIE Affinity Group: six placement rounds on 14–15 Nov 2026 at BEC Bagalkote. ₹50 per team of 2. Register by 10 Nov.";
+  "WISION 6.0, the annual event by BEC-IEEE Women in Engineering (WIE-SBA35261) Affinity Group, takes place on 13–14 November 2026 at BEC Bagalkote. Teams of 2, with at least one girl member. Registration fee: ₹50 per IEEE member and ₹70 per non-IEEE member. Register by 10 November 2026.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
