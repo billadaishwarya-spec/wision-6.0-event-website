@@ -28,7 +28,7 @@ export function About() {
             className="mt-6 text-lg leading-relaxed text-foreground"
           >
             WISION is an annual event organised by the BEC-IEEE
-            Women in Engineering (WIE) Affinity Group, celebrating
+            Women in Engineering (WIE)-SBA35261 Affinity Group, celebrating
             the talent, creativity and potential of women in engineering.
           </p>
 

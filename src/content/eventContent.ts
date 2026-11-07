@@ -205,14 +205,9 @@ export type TeamMember = {
 
 export const TEAM: TeamMember[] = [
   {
-    role: "Faculty Advisor",
+    role: "Faculty Advisor BEC-IEEE WIE",
     name: "Dr. Vijaylakshmi S. Jigajinni",
     photo: "/team/faculty.png",
-  },
-  {
-    role: "Chair, BEC-IEEE",
-    name: "Bharatesh B.",
-    photo:"/team/bhartesh.png",
   },
   {
     role: "WIE Chair",
@@ -220,15 +215,15 @@ export const TEAM: TeamMember[] = [
     photo: "/team/wie-chair.png",
   },
   {
-    role: "Secretary",
-    name: "Soujanya R.",
-    photo: "/team/secretary.png",
-  },
-  {
-    role: "Joint Secretary",
-    name: "Gouri S.",
-    photo: "/team/Joint-secretary.png",
-  },
+  role: "WIE Secretary",
+  name: "Soujanya Sajjan",
+  photo: "/team/secretary.png",
+},
+{
+  role: "WIE Joint Secretary",
+  name: "Gouri Kurtakoti",
+  photo: "/team/Joint-secretary.png",
+},
 ];
 
 // --------------------------------------------------

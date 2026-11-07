@@ -1,3 +1,4 @@
+
 import { UserRound } from "lucide-react";
 import { TEAM } from "@/content/eventContent";
 import { SectionHeading } from "./SectionHeading";
@@ -22,9 +23,9 @@ export function Team() {
               key={m.role}
               data-reveal
               className={
-                i === 0
-                  ? "col-span-2 mx-auto w-[65%] md:col-span-1 md:mx-0 md:w-full"
-                  : "col-span-1 w-full"
+                i < 2
+                  ? "col-span-2 mx-auto w-[65%] md:col-span-4 md:w-[32%]"
+                  : "col-span-1 w-full md:col-span-2"
               }
             >
               <div className="card-surface overflow-hidden p-2">
@@ -54,9 +55,7 @@ export function Team() {
                 </div>
 
                 <div className="px-2 pb-2 pt-3">
-                  <p className="font-bold">
-                    {m.name}
-                  </p>
+                  <p className="font-bold">{m.name}</p>
 
                   <p className="text-sm font-medium text-primary-soft">
                     {m.role}
