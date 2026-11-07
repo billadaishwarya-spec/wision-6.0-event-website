@@ -19,10 +19,8 @@ export const EVENT = {
   dates: "13–14 November 2026",
   time: "4:30 PM – 7:00 PM",
 
-  venue:
-    "ECE Department Seminar Hall, Basaveshwar Engineering College, Bagalkote",
-
-  venueShort: "ECE Seminar Hall, BEC Bagalkote",
+  venue: "Main Building, BEC Bagalkote",
+  venueShort: "Main Building, BEC Bagalkote",
 
   // Registration fees per person
   fee: 50,
@@ -44,7 +42,8 @@ export const EVENT = {
 // --------------------------------------------------
 
 // Add the actual Google Form URL when available.
-export const REGISTRATION_URL = "https://forms.gle/vUoF9VbzJtAydPr18";
+export const REGISTRATION_URL =
+  "https://forms.gle/vUoF9VbzJtAydPr18";
 
 export const INSTAGRAM_URL =
   "https://www.instagram.com/bec_ieee/";
@@ -204,26 +203,41 @@ export type TeamMember = {
 };
 
 export const TEAM: TeamMember[] = [
+  // ROW 1
+  {
+    role: "Branch Counselor, BEC-IEEE",
+    name: "Dr. S. Y. Goudappanavar",
+    photo: "/team/branch-counselor.png",
+  },
   {
     role: "Faculty Advisor BEC-IEEE WIE",
     name: "Dr. Vijaylakshmi S. Jigajinni",
     photo: "/team/faculty.png",
+  },
+
+  // ROW 2
+  {
+    role: "Chair, BEC-IEEE",
+    name: "Bharatesh B.",
+    photo: "/team/bhartesh.png",
   },
   {
     role: "WIE Chair",
     name: "Aishwarya Billad",
     photo: "/team/wie-chair.png",
   },
+
+  // ROW 3
   {
-  role: "WIE Secretary",
-  name: "Soujanya Sajjan",
-  photo: "/team/secretary.png",
-},
-{
-  role: "WIE Joint Secretary",
-  name: "Gouri Kurtakoti",
-  photo: "/team/Joint-secretary.png",
-},
+    role: "WIE Secretary",
+    name: "Soujanya Sajjan",
+    photo: "/team/secretary.png",
+  },
+  {
+    role: "WIE Joint Secretary",
+    name: "Gouri Kurtakoti",
+    photo: "/team/Joint-secretary.png",
+  },
 ];
 
 // --------------------------------------------------

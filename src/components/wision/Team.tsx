@@ -18,15 +18,11 @@ export function Team() {
         />
 
         <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {TEAM.map((m, i) => (
+          {TEAM.map((m) => (
             <li
               key={m.role}
               data-reveal
-              className={
-                i < 2
-                  ? "col-span-2 mx-auto w-[65%] md:col-span-4 md:w-[32%]"
-                  : "col-span-1 w-full md:col-span-2"
-              }
+              className="w-full"
             >
               <div className="card-surface overflow-hidden p-2">
                 <div className="bg-placeholder aspect-[4/5] overflow-hidden rounded-xl">

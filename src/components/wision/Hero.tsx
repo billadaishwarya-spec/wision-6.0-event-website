@@ -1,3 +1,4 @@
+
 import { CalendarDays, MapPin, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EVENT } from "@/content/eventContent";
@@ -57,7 +58,7 @@ export function Hero() {
           <span className="block text-primary-soft">6.0</span>
         </h1>
 
-        {/* Registration Button - Directly below heading */}
+        {/* Registration Button */}
         <div data-hero className="mt-5">
           <RegisterButton
             label="Register Here"
@@ -86,6 +87,7 @@ export function Hero() {
           data-hero
           className="mt-8 grid gap-3 sm:grid-cols-2 sm:max-w-2xl"
         >
+          {/* Date and Time */}
           <div className="card-surface flex items-start gap-3 p-4">
             <CalendarDays
               className="mt-0.5 size-5 shrink-0 text-primary"
@@ -97,7 +99,9 @@ export function Hero() {
                 When
               </dt>
 
-              <dd className="font-semibold">{EVENT.dates}</dd>
+              <dd className="font-semibold">
+                {EVENT.dates}
+              </dd>
 
               <dd className="text-sm text-muted-foreground">
                 {EVENT.time}, both days
@@ -105,6 +109,7 @@ export function Hero() {
             </div>
           </div>
 
+          {/* Venue */}
           <div className="card-surface flex items-start gap-3 p-4">
             <MapPin
               className="mt-0.5 size-5 shrink-0 text-primary"
@@ -117,11 +122,7 @@ export function Hero() {
               </dt>
 
               <dd className="font-semibold">
-                ECE Department Seminar Hall
-              </dd>
-
-              <dd className="text-sm text-muted-foreground">
-                Basaveshwar Engineering College, Bagalkote
+                {EVENT.venue}
               </dd>
             </div>
           </div>
