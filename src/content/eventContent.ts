@@ -28,9 +28,9 @@ export const EVENT = {
   nonIeeeFee: 70,
   teamSize: 2,
 
-  // Registration deadline
-  deadlineISO: "2026-11-10T23:59:00+05:30",
-  deadlineLabel: "10 November 2026, 11:59 PM IST",
+  // Updated registration deadline
+  deadlineISO: "2026-11-12T23:59:00+05:30",
+  deadlineLabel: "12 November 2026, 11:59 PM IST",
 
   // Event statistics
   activities: 6,
@@ -41,7 +41,6 @@ export const EVENT = {
 // REGISTRATION AND SOCIAL LINKS
 // --------------------------------------------------
 
-// Add the actual Google Form URL when available.
 export const REGISTRATION_URL =
   "https://forms.gle/vUoF9VbzJtAydPr18";
 
@@ -70,6 +69,8 @@ export function getInstagramUrl(): string | null {
 
 // --------------------------------------------------
 // OFFICIAL LOGOS
+// Individual logo references retained.
+// Combined image is used by Header.tsx.
 // Stored in public/logos/
 // --------------------------------------------------
 
@@ -108,7 +109,7 @@ export const OFFICIAL_LOGOS: OfficialLogo[] = [
 ];
 
 // --------------------------------------------------
-// SIX PLACEMENT ROUNDS
+// SIX EVENT ROUNDS
 // --------------------------------------------------
 
 export type Round = {
@@ -153,7 +154,7 @@ export const ROUNDS: Round[] = [
     number: "06",
     name: "INTERVIEW",
     details:
-      "Experience a placement-style interview covering personal introduction, technical knowledge, projects and situational questions. Demonstrate your confidence, clarity and readiness for real-world interviews.",
+      "Experience an interview-style challenge covering personal introduction, technical knowledge, projects and situational questions. Demonstrate your confidence, clarity and communication skills.",
   },
 ];
 
@@ -293,13 +294,14 @@ export const REWARDS = {
     "Opportunity to qualify for Day 2",
   ],
 
-  // WISION 6.0 benefits and rewards
+  // WISION 6.0 winner benefits
   winner: [
     "Certificate",
     "Exciting goodies",
     "Social media shout-out",
   ],
 
+  // WISION 6.0 runner-up benefits
   runnerUp: [
     "Certificate",
     "Exciting goodies",
@@ -355,14 +357,10 @@ export type GalleryPhoto = {
 // WISION 3.0 — One banner.
 // WISION 4.0 — One banner.
 // WISION 5.0 — One banner + four activity photos.
-//
 // --------------------------------------------------
 
 export const GALLERY: GalleryPhoto[] = [
-  // -----------------------------------------------
   // WISION 5.0 — OFFICIAL BANNER
-  // -----------------------------------------------
-
   {
     id: "wision-5-banner",
     edition: "5.0",
@@ -372,10 +370,7 @@ export const GALLERY: GalleryPhoto[] = [
     alt: "WISION 5.0 official event banner",
   },
 
-  // -----------------------------------------------
   // WISION 5.0 — ACTIVITY PHOTOGRAPHS
-  // -----------------------------------------------
-
   {
     id: "wision-5-activity-01",
     edition: "5.0",
@@ -409,10 +404,7 @@ export const GALLERY: GalleryPhoto[] = [
     alt: "WISION 5.0 activity photograph 4",
   },
 
-  // -----------------------------------------------
   // WISION 4.0 — BANNER
-  // -----------------------------------------------
-
   {
     id: "wision-4-banner",
     edition: "4.0",
@@ -422,10 +414,7 @@ export const GALLERY: GalleryPhoto[] = [
     alt: "WISION 4.0 event banner",
   },
 
-  // -----------------------------------------------
   // WISION 3.0 — BANNER
-  // -----------------------------------------------
-
   {
     id: "wision-3-banner",
     edition: "3.0",
@@ -435,10 +424,7 @@ export const GALLERY: GalleryPhoto[] = [
     alt: "WISION 3.0 event banner",
   },
 
-  // -----------------------------------------------
   // WISION 2.0 — BANNER
-  // -----------------------------------------------
-
   {
     id: "wision-2-banner",
     edition: "2.0",
