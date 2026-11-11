@@ -18,7 +18,7 @@ import { prefersReducedMotion } from "@/lib/wision";
 const title = "WISION 6.0 — Think. Explore. Experience. | BEC-IEEE WIE";
 
 const description =
-  "WISION 6.0, the annual event by BEC-IEEE Women in Engineering (WIE-SBA35261) Affinity Group, takes place on 13–14 November 2026 at BEC Bagalkote. Teams of 2, with at least one girl member. Registration fee: ₹50 per IEEE member and ₹70 per non-IEEE member. Register by 10 November 2026.";
+  "WISION 6.0, the annual event by BEC-IEEE Women in Engineering (WIE-SBA35261) Affinity Group, takes place on 13–14 November 2026 at BEC Bagalkote. Teams of 2, with at least one girl member. Registration fee: ₹50 per IEEE member and ₹70 per non-IEEE member. Register by 12 November 2026, 11:59 PM IST.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

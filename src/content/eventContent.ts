@@ -42,7 +42,7 @@ export const EVENT = {
 // --------------------------------------------------
 
 export const REGISTRATION_URL =
-  "https://forms.gle/vUoF9VbzJtAydPr18";
+  "https://forms.gle/kjrQ6MtH6NR1vsV77";
 
 export const INSTAGRAM_URL =
   "https://www.instagram.com/bec_ieee/";
